@@ -392,7 +392,7 @@ class Roo::Base
       @header_line = row_with(options[:header_search])
     elsif [:first_row, true].include?(options[:headers])
       @headers = []
-      row(first_row).each_with_index { |x, i| @headers << [x, i + 1] }
+      row(@header_line).each_with_index { |x, i| @headers << [x, i + 1] }
     else
       set_headers(options)
     end
