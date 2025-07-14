@@ -47,7 +47,7 @@ class Roo::Base
     @first_column = {}
     @last_column = {}
 
-    @header_line = 1
+    @header_line = options[:header_line] || 1
   end
 
   def close
